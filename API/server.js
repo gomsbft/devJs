@@ -21,3 +21,7 @@ app.get("/shop", (req, res) => {
 app.get("/self", (req, res) => {
   res.send("자기 소개 페이지 입니다")
 })
+
+app.get("/greet", (req, res) => {
+  res.send(JSON.stringify({message: "안녕하세요!!!"}))
+})
