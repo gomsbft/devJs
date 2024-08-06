@@ -31,5 +31,5 @@ app.get("/self", (req, res) => {
 //   res.send(JSON.stringify({message: "안녕하세요!!!"}))
 // })
 app.get("/users", (req, res) => {
-  
+  res.json(users);
 })
