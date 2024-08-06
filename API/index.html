@@ -9,5 +9,13 @@
 <body>
   <h1>안녕하세요!</h1>
   <button id="greeting">인사</button>
+  <script>
+    let greeting = document.querySelector("#greeting");
+    greeting.addEventListener("click",);
+    function sayHello() {
+      fetch("http://localhost/greet")
+      .then(response => response.json())
+    }
+  </script>
 </body>
 </html>
