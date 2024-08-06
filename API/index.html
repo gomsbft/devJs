@@ -40,8 +40,11 @@
             ul.appendChild(li);
           })
         }else {
-
+          throw new Error("데이터가 배열이 아닙니다.");
         }
+      })
+      .catch(error => {
+        console.log(error)
       })
     })
   </script>
