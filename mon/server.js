@@ -3,9 +3,7 @@ import mongoose from "mongoose"
 import dotenv from "dotenv"
 import bodyParser from "body-parser";
 import route from "./model/routes/userRoutes.js"
-const cors = require("cors")
 
-app.use(cors());
 
 const app = express();
 dotenv.config();
