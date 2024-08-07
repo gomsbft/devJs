@@ -8,11 +8,10 @@ const users = [
   {name: "Park", email: "Park@naver.com"}
 ]
 
-app.listen(port, () => {
-  console.log(`서버 실행! http://localhost:${port}`)
-})
+app.use(express.static(__dirname + "/public"))
+
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname + "/index.html"))
+  res.sendFile(path.join(__dirname + "public", "/index.html"))
 })
 
 app.get("/post", (req, res) => {
@@ -32,4 +31,8 @@ app.get("/self", (req, res) => {
 // })
 app.get("/users", (req, res) => {
   res.json(users);
+})
+
+app.listen(port, () => {
+  console.log(`서버 실행! http://localhost:${port}`)
 })

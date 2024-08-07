@@ -42,3 +42,17 @@ export const update = async(req, res) => {
     res.status(500).json({error: "서버 에러"});
 }
 }
+
+export const deleteUser = async(req, res) => {
+  try{
+    const id = req.params.id
+    const userExist = await User.findOne({_id: id});
+    if(!userExist) {
+      return res.status(404).json({message: "Not Found"})
+    }
+    await User.findByIdAndDelete(id);
+    res.status(200).json({message: "삭제"});
+  }catch(error) {
+    res.status(500).json({error: "서버 에러"});
+}
+}
