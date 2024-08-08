@@ -12,15 +12,23 @@ app.use(express.urlencoded({extended: true}));
 app.use(expressLayouts);
 app.use(express.static("public"));
 
+const users2 = [
+  {name: "Kim", age: 17, role: "front"},
+  {name: "Lee", age: 25, role: "back"},
+  {name: "Park", age: 30, role: "full"},
+  {name: "Choi", age: 16, role: "front"}
+]
+
 app.get("/", (req, res) => {
   const data = {message: "helloworld"};
   res.render("index", { 
-    tasks: tasks,
+    tasks: tasks, user2,
     data,
     people: [
-      {name: "Kim"},
-      {name: "Lee"},
-      {name: "Park"}
+      {name: "Kim", age: 17, role: "front"},
+      {name: "Lee", age: 25, role: "back"},
+      {name: "Park", age: 30, role: "full"},
+      {name: "Choi", age: 16, role: "front"}
     ]
 
   });

@@ -27,6 +27,16 @@
       <li><%= person.name %></li>
     <% } %>
    </div>
+   <div>
+    <% for(let pp of people){ %>
+      <% if( pp.age >= 18 ){ %>
+        <%=pp.name%> : "pass"
+      <% }else {%>
+        <%=pp.name%> : "reject"
+        <% } %>
+    <% } %>
+   </div>
+   
    <div class="container">
       <h1>list</h1>
       <form action="/addTask" method="POST">
@@ -43,6 +53,14 @@
           </form>
         </li>
         <% }) %>
+      </ul>
+      <ul>
+        <% users2.forEach(user => {%>
+        <li>
+          name: <%= user.name %> / age: <%= user.age %> / role: <%= user.role %>
+          <%= user.age >= 18 ? "pass" : "reject" %>
+        </li>
+        <% })  %>
       </ul>
    </div>
 </body>
