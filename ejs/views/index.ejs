@@ -7,29 +7,23 @@
 </head>
 <body>
   <h1>안녕하세요</h1>
-  <p><%= message %></p>
   <p><%= "Hello" + "world" %></p>
   <p><%= 10 - 2 %></p>
   <p><%= true ? "참" : "거짓" %></p>
   <p><%= false ? "참" : "거짓" %></p>
-  <p><%= "<h3>Hello</h3>"" %></p>
   <div>
     <% let str = "hello" %>
     <%= str %>
   </div>
-  <div>
-    <% if(true) { %> 
-      <h2>출력!!</h2>
-    <% } %>
-    <% if(false) { %> 
-      <h2>출력 안됌!!</h2>
-    <% } %>
+   <div>
+    <% let arr = ["apple", "banana", "cherry"] %>
+    <% arr.forEach((fruit) => { %>
+      <h3><%= fruit %> 입니다.</h3>
+    <% }) %>
    </div>
    <div>
-    <% if(ture) { %>
-      <div>cka</div>
-    <% }else { %>
-      <div>거짓</div>
+    <% for(let person of people){ %>
+      <li><%= person.name %></li>
     <% } %>
    </div>
 </body>
