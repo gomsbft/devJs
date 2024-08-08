@@ -56,7 +56,7 @@
       </ul>
       <ul>
         <% users2.forEach(user => {%>
-        <li>
+        <li class="<%= user.role%>">
           name: <%= user.name %> / age: <%= user.age %> / role: <%= user.role %>
           <%= user.age >= 18 ? "pass" : "reject" %>
         </li>

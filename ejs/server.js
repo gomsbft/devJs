@@ -22,7 +22,7 @@ const users2 = [
 app.get("/", (req, res) => {
   const data = {message: "helloworld"};
   res.render("index", { 
-    tasks: tasks, user2,
+    tasks: tasks, users2,
     data,
     people: [
       {name: "Kim", age: 17, role: "front"},
